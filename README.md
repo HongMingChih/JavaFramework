@@ -1,2 +1,2 @@
 # JavaFramework
-框架範例
+框架範例&練習
