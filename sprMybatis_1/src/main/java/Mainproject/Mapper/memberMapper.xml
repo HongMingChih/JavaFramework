@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memberMapper">
+
+	<insert id="add" parameterType="Mainproject.Model.member">
+  	insert into member(name,username,password) values(#{name},#{username},#{password})
+  </insert>
+
+	<select id="queryAll" resultType="Mainproject.Model.member">
+  	select * from member
+  </select>
+
+	<select id="queryId" resultType="Mainproject.Model.member">
+  	select * from member where id=#{id}
+  </select>
+
+	<select id="queryMember" resultType="Mainproject.Model.member">
+  	select * from member where username=#{username} and password=#{password}
+  </select>
+
+
+	<update id="update" parameterType="Mainproject.Model.member">
+  	update member set name=#{name},username=#{username},username=#{username} where id=#{id}
+  </update>
+
+	<delete id="delete" parameterType="Mainproject.Model.member">
+  	delete from member where id=#{id}
+  </delete>
+
+</mapper>
